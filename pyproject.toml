@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pypi_readme"
+description = "No description"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Daniil Kalamin", email = "dakalamin@gmail.com" }
+]
+
+# https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed"
+]
+keywords = [
+    "pypi",
+    "readme",
+    "demo"
+]
+
+dynamic = ["readme", "version"]
+requires-python = ">=3.7"
+dependencies = [
+    "click"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine>=1.11.0"
+]
+
+[project.urls]
+Source = "https://github.com/dakalamin/pypi_readme"
+Issues = "https://github.com/dakalamin/pypi_readme/issues"
+
+[tool.setuptools_scm]
